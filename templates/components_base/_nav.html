@@ -9,7 +9,7 @@
                     <img src="{% static 'loft/assets/icons/exit.svg' %}" alt="exit">
                 </a>
             </div>
-            <ul class="nav__list">
+            <ul class="nav__list header_list_nav">
                 <li>
                     <a href="{% url 'main' %}" class="nav__list-links">
                         <img src="{% static 'loft/assets/icons/home.svg' %}" alt="home">
@@ -30,43 +30,7 @@
                 </li>
 
 
-                <li>
-                    <a href="{% url 'profile' %}"
-                       class="nav__list-links {% if 'profile' in request.path %}active{% endif %}" id="_profile">
-                        <img src="{% static 'loft/assets/icons/profile-icon.svg' %}" alt="">
-                        Профиль
-                    </a>
-                </li>
 
-                <li>
-                    <a href="{% url 'profile' %}"
-                       class="nav__list-links">
-                        <img src="{% static 'loft/assets/icons/bag.svg' %}" alt="">
-                        Корзина
-                    </a>
-                </li>
-
-                <li>
-                    <a href="{% url 'profile' %}"
-                       class="nav__list-links">
-                        <img src="{% static 'loft/assets/icons/wishlist-icon.svg' %}" alt="">
-                        Избранное
-                    </a>
-                </li>
-
-                <li>
-                    {% if not request.user.is_authenticated %}
-                    <a href="{% url 'login' %}" class="nav__list-links">
-                        <img src="{% static 'loft/icons/logout.svg' %}" alt="">
-                        войти
-                    </a>
-                    {% else %}
-                    <a href="{% url 'logout' %}" class="nav__list-links">
-                        <img src="{% static 'loft/icons/logout.svg' %}" alt="">
-                        выйти
-                    </a>
-                    {% endif %}
-                </li>
 
             </ul>
             <!-- /.nav__list -->
@@ -105,6 +69,44 @@
         </div>
         <!-- /.nav__content -->
         <ul class="nav__list _categories">
+            <li>
+                    <a href="{% url 'profile' %}"
+                       class="nav__list-links {% if 'profile' in request.path %}active{% endif %}" id="_profile">
+                        <img src="{% static 'loft/assets/icons/profile-icon.svg' %}" alt="">
+                        Профиль
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'profile' %}"
+                       class="nav__list-links">
+                        <img src="{% static 'loft/assets/icons/bag.svg' %}" alt="">
+                        Корзина
+                    </a>
+                </li>
+
+                <li>
+                    <a href="{% url 'profile' %}"
+                       class="nav__list-links">
+                        <img src="{% static 'loft/assets/icons/wishlist-icon.svg' %}" alt="">
+                        Избранное
+                    </a>
+                </li>
+
+                <li>
+                    {% if not request.user.is_authenticated %}
+                    <a href="{% url 'login' %}" class="nav__list-links">
+                        <img src="{% static 'loft/icons/logout.svg' %}" alt="">
+                        войти
+                    </a>
+                    {% else %}
+                    <a href="{% url 'logout' %}" class="nav__list-links">
+                        <img src="{% static 'loft/icons/logout.svg' %}" alt="">
+                        выйти
+                    </a>
+                    {% endif %}
+                </li>
+
             <li>
                 <h2 class="nav__title nav__title-categories">Категории</h2>
             </li>

@@ -2006,6 +2006,10 @@ button.btns__loadfile:hover {
         transition: left .5s ease-in-out;
         transition-delay: .3s;
     }
+    .pagination_list{
+    display: flex;
+
+    }
 
     .nav::-webkit-scrollbar {
         display: none;
@@ -2627,6 +2631,8 @@ button.btns__loadfile:hover {
     font-size: 20px;
     color: black;
 }
+
+
 
 
 
